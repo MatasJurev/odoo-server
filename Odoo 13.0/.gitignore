@@ -1,0 +1,19 @@
+# Odoo compiled Python files
+*.pyc
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Configuration files
+*.yml
+*.conf
+
+# Custom rules 
+Uninstall.exe
+/vcredist
+/thirdparty
+/python
+/PostgreSQL
+/nssm
+/server

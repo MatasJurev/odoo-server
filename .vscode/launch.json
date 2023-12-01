@@ -1,0 +1,26 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Odoo13",
+            "type": "python",
+            "request": "launch",
+            "stopOnEntry": false,
+            "python": "D:\\Programming\\projects\\python\\odoo server\\Odoo 13.0\\python\\pythonw.exe",
+            "console": "integratedTerminal",
+            "program": "${workspaceRoot}\\Odoo 13.0\\server\\odoo-bin",
+            "args": [
+                "--config=${workspaceRoot}\\Odoo 13.0\\server\\odoo.conf",
+            ],
+            "cwd": "${workspaceRoot}\\Odoo 13.0\\server",
+            "env": {},
+            "envFile": "${workspaceRoot}\\Odoo 13.0\\server/.env",
+            "debugOptions": [
+                "RedirectOutput"
+            ]
+        }
+    ]
+}
