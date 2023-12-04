@@ -14,6 +14,7 @@
             "program": "${workspaceRoot}\\Odoo 13.0\\server\\odoo-bin",
             "args": [
                 "--config=${workspaceRoot}\\Odoo 13.0\\server\\odoo.conf",
+                "--update=custom_document",
             ],
             "cwd": "${workspaceRoot}\\Odoo 13.0\\server",
             "env": {},
