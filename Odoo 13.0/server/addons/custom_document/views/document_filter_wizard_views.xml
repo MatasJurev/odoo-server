@@ -1,0 +1,23 @@
+<odoo>
+    <data>
+        <record id="view_document_filter_wizard" model="ir.ui.view">
+            <field name="name">document.filter.wizard.form</field>
+            <field name="model">document.filter.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="date_from" />
+                        <field name="date_to" />
+                        <field name="employee_ids" widget="many2many_tags" />
+                    </group>
+                    <footer>
+                        <button string="Apply" class="oe_highlight" type="object"
+                            name="filter_documents" />
+                        <button string="Cancel" class="oe_link" type="object" name="cancel"
+                            special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -16,4 +16,7 @@ Uninstall.exe
 /python
 /PostgreSQL
 /nssm
-/server
+
+server/*
+!server/addons/
+!server/addons/*

@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_create,perm_read,perm_unlink,perm_write
+access_custom_document_user,custom.document,model_custom_document,base.group_user,1,1,0,0
+access_custom_document_admin,custom.document,model_custom_document,base.group_erp_manager,1,1,1,1

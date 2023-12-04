@@ -1,0 +1,65 @@
+<odoo>
+    <data>
+        <record id="view_document_tree" model="ir.ui.view">
+            <field name="name">custom.document.tree</field>
+            <field name="model">custom.document</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="company_id" />
+                    <field name="user_id" groups="base.group_user" />
+                    <field name="assigned_employee_ids" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_document_form" model="ir.ui.view">
+            <field name="name">custom.document.form</field>
+            <field name="model">custom.document</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name" />
+                            <field name="description" />
+                            <field name="company_id" />
+                            <field name="user_id" readonly="1" />
+                            <field name="assigned_employee_ids" widget="many2many_tags" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_document_filter_wizard" model="ir.ui.view">
+            <field name="name">document.filter.wizard.form</field>
+            <field name="model">document.filter.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="date_from" />
+                        <field name="date_to" />
+                        <field name="employee_ids" widget="many2many_tags" />
+                    </group>
+                    <footer>
+                        <button string="Apply" class="oe_highlight" type="object"
+                            name="filter_documents" />
+                        <button string="Cancel" class="oe_link" type="object" name="cancel"
+                            special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_document_filter_wizard" model="ir.actions.act_window">
+            <field name="name">Filter Documents</field>
+            <field name="res_model">document.filter.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="custom_document.view_document_filter_wizard" />
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="menu_document_filter_wizard" name="Documents Management"
+            action="action_document_filter_wizard" />
+    </data>
+</odoo>
